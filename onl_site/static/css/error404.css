@@ -1,0 +1,11 @@
+section {
+    margin: 0 auto;
+    width: 1400px;
+    height: 500px;
+}
+
+h1 {
+    font-size: 40px;
+    font-family: BebasNeueProB;
+    color: #646464; 
+}

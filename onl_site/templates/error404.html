@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+  <link rel="stylesheet" href="{% static 'css/error404.css' %}" type="text/css">
+{% endblock %}
+
+{% block content %}
+  <section> 
+    <h1>Помилка 404 - сторінка не знайдена або ваш запит некоректний</h1>
+    <p>Будь ласка, перейдіть на <a  href="{% url 'home_page' %}">іншу сторінку</a>.</p>
+  </section> 
+{% endblock %}

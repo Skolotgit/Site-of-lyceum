@@ -1,0 +1,31 @@
+.title_gr  h1 {   
+	background-image: linear-gradient(135deg, #f86868, #7441f5);    
+}
+
+.button {
+    height: auto;
+    font-size: 1.5vw;
+    color: #613F91;
+    font-family: RobotoM;
+    text-align: center;
+    margin: 2vw 2vw;
+    padding: 1vw 2vw;
+    background: #ffffff;
+    border-radius: 1vw;
+    border: 0.3vw solid #8862eb;
+}
+
+@media screen and (min-width: 1601px) {
+    .button {
+        height: auto;
+        font-size: 25px;
+        color: #613F91;
+        font-family: RobotoM;
+        text-align: center;
+        margin: 32px 32px;
+        padding: 16px 32px;
+        background: #ffffff;
+        border-radius: 16px;
+        border: 4.8px solid #8862eb;
+    }
+}

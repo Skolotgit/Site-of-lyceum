@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+  <link rel="stylesheet" href="{% static 'css/history.css' %}" type="text/css">
+{% endblock %}
+
+{% block content %}
+  <content>
+    <div class="col">
+      <div class="title_gr">
+        <h1>IСТОРІЯ<br>ЗАКЛАДУ</h1>
+      </div>
+      <div id="owl-years" class="owl-carousel owl-theme">
+        <div class="item" data-dot="">
+          <div class="year" style="background-image: linear-gradient(180deg, #fa7df9,  #ff5353);"><p>1<br>9<br>9<br>0</p></div>
+          <p>Було створено навчальний заклад нового типу - Рівненський обласний ліцей-інтернат педагогічного профілю для обдарованих дітей із районів області, що потерпіли внаслідок аварії на ЧАЕС, який сьогодні відомий не лише в україні, але й за її межами.</p>
+        </div>
+        <div class="item" data-dot="">
+          <div class="year" style="background-image: linear-gradient(180deg, #f9db4f, #f2a559);"><p>1<br>9<br>9<br>3</p></div>
+          <p>Рівненський обласний ліцей-інтернат став багатопрофільним.<br>Навчання в закладі здійснювалося за такими профілями:<br>- фізико-математичний,<br>- хіміко-біологічний,<br>- історико-правовий,<br>- іноземна філологія (англійська, німецька мова).</p>
+        </div>
+        <div class="item" data-dot="">
+          <div class="year" style="background-image: linear-gradient(180deg, #74f977, #53d5ff);"><p>1<br>9<br>9<br>6</p></div>
+          <p>Бандури передзвін. Батьків маленьких "кобзарят", які навчаються у класах художньо-естетичного напряму "Кобзарство" навчально-виховного комплексу "Рівненський обласний ліцей-інтернат" влада краю звільнила від плати за перебування їх чада у навчальному закладі. Така підтримка обласних обранців неабияк тішить як самих бандуристів, так і їх рідних та, як стверджують вчителі, дає змогу талановитим дітям без перешкод навчатися древньому ремеслу.</p>
+        </div>
+      </div>
+      <a class="one_line_content block right left_outflow_element_before" href="{% url 'photos_of_90s_page' %}">
+        <div class="vertical_center">
+          <p>ІСТОРИЧНІ<br>ФОТОГРАФІЇ З 90-Х</p>
+        </div>
+        <img src="{% static 'images/photo_gradient1.png' %}">
+      </a>
+      <a class="one_line_content block left right_outflow_element_before" href="{% url 'old_catalog_of_articles_page' %}">
+        <img src="{% static 'images/photo_gradient2.png' %}">
+        <div class="vertical_center">
+          <p>ФОТОГРАФІЇ<br>З ВАЖЛИВИХ ПОДІЙ</p>
+        </div>
+      </a> 
+      <a class="one_line_content block right left_outflow_element_before" href="{% url 'videoteka_on_yt_page' %}">
+        <div class="vertical_center">
+          <p>ВІДЕОМАТЕРІАЛИ ТА<br>ЗГАДКИ НА ТЕЛЕБАЧЕННІ</p>
+        </div>
+        <img src="{% static 'images/photo_gradient3.png' %}">
+      </a>
+      <div class="caption reviews">ВІДГУКИ НАШИХ РОДИН</div>
+      <div id="owl-quotes" class="owl-carousel owl-theme">
+        <div class="item" data-dot="">
+          <div class="quote"><p class="left">«</p><p>У Вчителя важка і водночас прекрасна Доля: душа завжди блукає веснами, щоб колись, на світанку, зустріти незачерствілі серця учнів, які прагнуть знайти свій шлях Пізнання Істини в житті. Я дякую Вам, Наталіє Володимирівно за те, що вказали мені на цей шлях, підтримували, коли спотикалась об сіре каміння життя і обставин, навчили й виховали, даруючи зерна мудрості. Я ніколи не забуду перший урок літератури, коли ми вчили Шевченка,Франка, а Ви щоразу повторювали про долю України, про святе і грішне, про минуле й сьогодення… А ще одвічне Франкове: "Лиш боротись - значить жить".</p><p class="right">»</p></div>
+          <p id="author">Касянчук Ольга <span class="reviews">2003</span></p>
+        </div>
+        <div class="item" data-dot="">
+          <div class="quote"><p class="left">«</p><p>Дякую Тобі, мій Незабутній ліцею справжніх неповторних особистостей, що я навчився від тебе різним життєвим мудростям.</p><p class="right">»</p></div>
+          <p id="author">Меленюк Сергій <span class="reviews">1999</span></p>
+        </div>
+        <div class="item" data-dot="">
+          <div class="quote"><p class="left">«</p><p>Ліцей… Моя друга домівка, моя родина, яка прийняла мене з благоговінням, виховувала з любов'ю… і випустила вільною птахою…</p><p class="right">»</p></div>
+          <p id="author">Сосюк Марина <span class="reviews">2004</span></p>
+        </div>
+        <div class="item" data-dot="">
+          <div class="quote"><p class="left">«</p><p>Ліцей - це заклад, обраний Богом для наших юних душ… Це так важливо, крім знань, навчитися життєвим істинам: умінню прощати і бути прощеним…</p><p class="right">»</p></div>
+          <p id="author">Бичко Олена <span class="reviews">2005</span></p>
+        </div>
+        <div class="item" data-dot="">
+          <div class="quote"><p class="left">«</p><p>Це дивовижний заклад із надзвичайною дивовижно-позитивною енергетикою, в якому є право… на помилку. І головне - вчить отримувати перемогу над власною поразкою.</p><p class="right">»</p></div>
+          <p id="author">Станіславчук Василь <span class="reviews">2007</span></p>
+        </div>
+        <div class="item" data-dot="">
+          <div class="quote"><p class="left">«</p><p>Ліцей допоміг нам із "сірих горобчиків" злетіти гірськими орлами, стати особистостями з відчуттям свободи і рідної України.</p><p class="right">»</p></div>
+          <p id="author">Бачишина Ольга <span class="reviews">2008</span></p>
+        </div>
+      </div>
+      <div class="caption anthem">ГІМН ЛІЦЕЮ</div>
+      <div class="one_line_content">
+        <img src="{% static 'images/photo_gradient4.png' %}" class="anthem_img">
+        <div class="vertical_center anthem_text">
+          <p>Якщо ти прагнеш перемог,<br>Дерзай, твори і не здавайся!<br>Світи в науці відкривай<br>Для добрих справ - і цим пишайся<br><br>Vivat, ліцею наш, Vivat!<br>До знань тут зоряна дорога.<br>Нехай святиться в кожному із нас<br>Наука, Мудрість і Свобода!</p>
+        </div>  
+      </div>
+      <div class="caption psychologist">СТОРІНКА ПСИХОЛОГА</div>
+      <div class="one_line_content">
+        <p class="psychologist_text">Шановні БАТЬКИ!<br>Рада ВАС вітати на <a href="https://psiholog1966.blogspot.com/p/blog-page_21.html">своєму блозі.</a><br><br>Працюю в ліцеї 15 років.І як фахівець для себе не перестаю відкривати знов і знов світ підлітків - цей непростий, цікавий, непередбачуваний....<br><br>Переконана, що саме підлітковий вік є найважливішим періодом формування особистості -  коли будується своя система цінностей, коли закріплюються певні патерни поведінки, коли вибудовується персональна картина світу, стосунків тощо....<br><br>І саме наше з ВАМИ завдання бути поряд з ними - нашими дітьми в цей непростий період!<br><br>Сподіваюсь на співпрацю!..... З повагою Вероніка Євгеніївна</p>
+        <img src="{% static 'images/photo_gradient5.png' %}" class="psychologist_img">
+      </div>
+    </div> 
+  </content> 
+{% endblock %}

@@ -1,0 +1,27 @@
+.title_gr h1 {
+	background-image: linear-gradient(135deg, #f38abf, #e96969);
+}
+
+#t_doc {
+    font-size: 5vw;
+}
+
+.docs {
+    width: 42vw;
+    height: 54vw;
+    margin: 0 auto;
+    border-radius: 1vw;
+}
+
+@media screen and (min-width: 1601px) {
+    #t_doc {
+        font-size: 80px;
+    }
+
+    .docs {
+        width: 672px;
+        height: 864px;
+        margin: 0 auto;
+        border-radius: 16px;
+    }    
+}

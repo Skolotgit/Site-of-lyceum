@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+  <link rel="stylesheet" href="{% static 'css/home.css' %}" type="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  .parallax {
+    background-image: url("{% static 'images/electives.png' %}");
+  }
+  </style>
+{% endblock %}
+
+{% block content %}
+  <div id="owl-photos" class="owl-carousel owl-theme">
+    {% for i in images %}
+      {% if i.article == slider %}
+        <div class="item" data-dot=""><img src="{{ i.img.url }}"></div>
+      {% endif %}
+    {% endfor %}
+  </div>
+  <content>
+    <div class="col">
+      <div id="information" class="left_outflow_element_before">
+        <div class="title_gr">
+          <h1 style="background-image: linear-gradient(135deg, #49ccb2, #ad73ee);">ЗВ'ЯЗОК З НАМИ</h1>
+        </div>
+        <div class="one_line_content">
+          <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2191.4712759600334!2d26.251612150740407!3d50.6099809787034!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfff97c19415cc099!2z0J3QsNGD0LrQvtCy0LjQuSDQu9GW0YbQtdC5!5e0!3m2!1suk!2sua!4v1641220515709!5m2!1suk!2sua" allowfullscreen="" loading="lazy"></iframe>  
+          <div class="vertical_center info">
+            <p class="contacts">Рівне, вул. Котляревського, 1<br><a href="tel:+380362635145">+380 36 263 5145</a><br><a href="tel:+380362635195">+380 36 263 5195</a><br><a href="mailto:licey@ua.fm">licey@ua.fm</a><br>
+              <a href="https://www.facebook.com/VladyslavDzhus/"><img src="{% static 'images/facebook icon gr.png' %}" class="social_icon"></a>
+              <a href="https://www.youtube.com/channel/UCApblKLydr9iSHpieG1tsAw"><img src="{% static 'images/youtube icon gr.png' %}" class="social_icon"></a>
+            </p>  
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="title_admission">
+      <h1>ВСТУП</h1>
+    </div>
+    <div id="admission">
+      <div class="parallax"><a href="{% url 'admission_page' %}">Перший в області заклад освіти наукового спрямування запрошує на навчання обдаровану, творчу і талановиту молодь, яка прагне наукових звершень та відкриттів. На 2022-2023 навчальний рік оголошується набір учнів у 8 класи з поглибленим вивченням математики, історії, англійської мови, хімії та інформатики.</a></div>
+    </div>
+    <div class="col">
+      <div id="news" class="left_outflow_element_before">
+        <div class="title_gr">
+          <h1 style="background-image: linear-gradient(135deg, #5ea6fc, #e059d5)">ОСТАННІ НОВИНИ</h1>
+        </div>
+          <div id="owl-news" class="owl-carousel owl-theme">
+            {% for i in articles %}
+              <div class="item latest_news one_line_content" data-dot="">
+                <a class="article" href="{% url 'new_article_page' i.id %}">
+                  <div class="overlay_floor"><p>Детальніше</p></div>
+                  <div style="background-image:url('{{ i.article_preview.url }}')" class="preview"></div>
+                  <p>{{ i.article_title }}</p>
+                  <p class="pub_date">{{ i.pub_date|date:"j E Y" }}</p>
+                </a>
+              </div>
+            {% endfor %} 
+          </div>   
+      </div>
+    </div>
+  </content>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+{% endblock %}
+
+{% block content %}
+  <content>
+    <div class="col">
+      <div class="title_gr">
+        <h1 style="background-image: linear-gradient(135deg, #74f977, #53d5ff);">{{ title }}</h1>
+      </div>
+    </div> 
+    <div class="special_col">
+      <div class="list_content">
+        {% for i in page_obj %}
+          <iframe class="video_yt" src="{{ i.yt_video_src }}" title="YouTube video player" width="600px" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        {% endfor %}  
+      </div>
+    </div>
+    <div class="one_line_content">
+      {% for p in paginator.page_range %}
+        {% if page_obj.number == p %}
+          <a class="page_num page_num_selected">{{ p }}</a>
+        {% else %}
+          <a href="?page={{ p }}" class="page_num">{{ p }}</a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </content> 
+{% endblock %}

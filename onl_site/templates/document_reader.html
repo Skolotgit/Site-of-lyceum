@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+  <link rel="stylesheet" href="{% static 'css/document_reader.css' %}" type="text/css">
+{% endblock %}
+
+{% block content %}
+  <content>
+    <div class="col">
+      <div class="title_gr">
+        <h1 id="t_doc">{{ document.document_title }}</h1>
+      </div>
+      <div class="one_line_content">
+        <iframe src="{{ document.document_url }}" class="docs"></iframe>
+      </div>
+    </div> 
+  </content> 
+{% endblock %}

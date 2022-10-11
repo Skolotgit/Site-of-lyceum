@@ -1,0 +1,122 @@
+footer {
+    display: flex;
+    justify-content: center;  
+    margin-top: 10vw;
+    width: 100%;
+    height: auto;
+    background: linear-gradient(45deg, #a741d2, #de6fdf);
+}
+
+#logo_foot img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.white_icon {
+    margin: 0.5vw 0.1vw 0 0.1vw;
+    width: 1.7vw;
+    height: 1.7vw;
+}
+
+
+@media screen and (min-width: 1601px) {
+    footer {
+        display: flex;
+        justify-content: center;  
+        margin-top: 160px;
+        width: 100%;
+        height: auto;
+        background: linear-gradient(45deg, #a741d2, #de6fdf);
+    }
+
+    .foot_info {
+        margin: 0 304px;
+        line-height: 240px;
+    }  
+
+    .text_foot {
+        text-align: center;
+        font-family: RobotoM;
+        font-size: 22.4px;
+        color: #ffffff; 
+    }
+
+    #logo_foot {
+        margin-top: 90px; 
+        width: 160px;
+        height: auto;         
+    }    
+
+    #copyright {
+        width: 160px;
+        height: auto;
+        margin-top: 160px;
+        font-family: RobotoM;
+        font-size: 16px;
+        color: #ffffff;  
+    }    
+
+    .white_icon {
+        margin: 8px 1.6px 0 1.6px;
+        width: 27.2px;
+        height: 27.2px;
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1600px) {
+    .foot_info {
+        margin: 0vw 19vw;
+        line-height: 15vw;
+    }  
+
+    .text_foot {
+        text-align: center;
+        font-family: RobotoM;
+        font-size: 1.4vw;
+        color: #ffffff; 
+    }
+
+    #logo_foot {
+        margin-top: 5vw; 
+        width: 10vw;
+        height: auto;         
+    }    
+
+    #copyright {
+        width: 10vw;
+        height: auto;
+        margin-top: 10vw;
+        font-family: RobotoM;
+        font-size: 1vw;
+        color: #ffffff;  
+    }
+    
+}
+
+@media screen and (max-width: 640px) {
+    .foot_info {
+        margin: 0vw 15vw;
+        line-height: 15vw;
+    } 
+
+    .text_foot {
+        text-align: center;
+        font-family: RobotoM;
+        font-size: 1.4vw;
+        color: #ffffff; 
+    }
+
+    #copyright {
+        width: 10vw;
+        margin-top: 10vw;
+        font-family: RobotoM;
+        font-size: 1vw;
+        color: #ffffff; 
+    }   
+    
+    #logo_foot {
+        margin-top: 5vw; 
+        width: 10vw;         
+    }   
+
+}

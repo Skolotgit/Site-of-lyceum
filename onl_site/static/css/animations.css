@@ -1,0 +1,188 @@
+.link {
+    transition: 0.5s;
+}
+
+.link:hover {
+    color: #9871fd; 
+}
+
+#logotype, .social_icon, .white_icon, #logo_foot, #account_icon {
+    opacity: 1;
+    transition: 1s;
+}
+
+#logotype:hover, .social_icon:hover, .white_icon:hover, #logo_foot:hover, #account_icon:hover {
+    opacity: 0.5;    
+}
+
+.button, #login_window form button, .page_num {
+    transition: 0.5s;    
+}
+
+.show_window {
+    animation: 1s show ease forwards;  
+}
+
+.show_area {
+    animation: 0s show ease forwards;  
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+        z-index: 10;
+    }
+
+    100% {
+        opacity: 1;
+        z-index: 10;
+    }
+}
+
+.hide_window {
+    animation: 1s hide ease forwards;
+}
+
+.hide_area {
+    animation: 0s hide ease forwards;
+}
+
+@keyframes hide {
+    0% {
+        opacity: 1;
+        z-index: 10;
+    }
+
+    100% {
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+.document .text_about_document {
+    transition: 1s;     
+}
+
+.overlay_floor {
+    opacity: 0;
+    transition: 1s;
+}
+
+.overlay_floor:hover {
+    opacity: 0.9;   
+}
+
+.left_outflow_element_before, .right_outflow_element_before {   
+    opacity: 0;
+}
+
+.left_outflow_element_after {
+    animation: 2s left-outflow ease;
+    opacity: 1;
+}
+
+@keyframes left-outflow {
+    0% {
+        margin-left: -200%;
+    }
+
+    100% {
+        margin-left: 0;
+    }
+}
+
+.right_outflow_element_after {
+    animation: 2s right-outflow ease;
+    opacity: 1;    
+}
+
+@keyframes right-outflow {
+    0% {
+        margin-right: -200%;
+    }
+
+    100% {
+        margin-left: 0;
+    }
+}
+
+.fixed {
+    animation: 1s animate-fixed ease forwards;
+    position: fixed;
+    z-index: 9;
+}
+
+@keyframes animate-fixed {
+    0% {
+        box-shadow: 0 0 0 #3d3d3d;  
+    }
+
+    100% {
+        margin-left: 0;
+        box-shadow: 0 0 0.625vw #3d3d3d; 
+        padding: 1vw 0;
+    }
+}
+
+.after-fixed {
+    animation: 1s animate-after-fixed ease forwards; 
+}
+
+@keyframes animate-after-fixed {
+    0% {
+        box-shadow: 0 0 0.625vw #3d3d3d; 
+        padding: 1vw 0;
+    }
+
+    100% {
+        box-shadow: 0 0 0 #3d3d3d;
+    }
+}
+
+.document:hover .text_about_document {
+    background: #a07df8;  
+    border: 0.1vw solid #a07df8;
+    color: #ffffff;    
+}
+
+.button:hover, .page_num:hover {
+    background: #8862eb;
+    color: #ffffff;
+    border: 0.3vw solid #8862eb;
+}
+
+@media screen and (min-width: 1601px){ 
+    .document:hover .text_about_document {
+        background: #a07df8;  
+        border: 1.6px solid #a07df8;
+        color: #ffffff;   
+    }
+
+    .button:hover, .page_num:hover {
+        background: #8862eb;
+        color: #ffffff;
+        border: 4.8px solid #8862eb;
+    }
+    
+    #login_window form button:hover {
+        background: #8862eb;
+        color: #ffffff;
+        border: 2px solid #8862eb;
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1600px){
+    #login_window form button:hover {
+        background: #8862eb;
+        color: #ffffff;
+        border: 0.125vw solid #8862eb;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    #login_window form button:hover {
+        background: #8862eb;
+        color: #ffffff;
+        border: 0.5vw solid #8862eb;
+    }
+}    

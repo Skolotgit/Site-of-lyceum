@@ -1,0 +1,332 @@
+.title_gr h1 {
+	background-image: linear-gradient(135deg, #ee73b0, #ec4f4f);    
+}
+
+#owl-years .item {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.reviews {
+    color: #b958e6;
+}
+
+.anthem {
+    color: #f3a859;
+}
+
+.psychologist {
+    color: #5eda9c;
+}
+
+.right p {
+    text-align: right;   
+}
+
+.left p {
+    text-align: left;
+}
+
+.quote {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+@media screen and (min-width: 1601px) {
+    .year {
+        width: 150px;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        margin-right: 50px;
+    }
+
+    #owl-years p {
+        width: 700px;
+        font-size: 24px; 
+    }
+
+    #owl-years .year p {
+        margin: 0;
+        text-align: center;
+        color: #ffffff;
+        font-size: 60px;
+        font-family: BebasNeueProB;
+    }
+
+    .block {
+        margin: 100px 0;
+    }
+
+    .block div {
+        line-height: 530px;
+    }    
+
+    .block p {
+        font-size: 45px;
+        font-family: BebasNeueProB;
+    }
+
+    .block img {
+        width: 530px;
+        height: auto;
+    }
+
+    .caption {
+        margin: 100px 0px 40px 0px;
+        font-family: BebasNeueProB;
+        text-align: left;
+        font-size: 70px;
+    }
+
+    .quote p {
+        font-size: 30px;
+        width: 100%;
+    }
+
+    .quote .left {
+        text-align: left;
+        color: #b958e6;
+        font-size: 40px;
+    }
+
+    .quote .right {
+        text-align: right;
+        color: #b958e6;
+        font-size: 40px;
+    }
+
+    .quote p {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    #author {
+        text-align: right;
+        width: 100%;
+        margin: 0px;
+        font-size: 25px;
+    }
+
+    .anthem_img {
+        height: 410px;
+        width: auto;
+        margin-right: 40px;    
+    }
+
+    .anthem_text {
+        line-height: 410px;    
+    }
+
+    .psychologist_text, .psychologist_text a {
+        font-size: 20px;
+    }
+
+    .psychologist_img {
+        height: 410px;
+        width: auto;
+        margin: auto 0;
+    }
+}
+
+@media screen and (min-width: 640px) and (max-width: 1600px) {
+    .year {
+        width: 9.375vw;
+        height: 18.75vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 1.25vw;
+        margin-right: 3.125vw;
+    }
+
+    #owl-years p {
+        width: 43.75vw;
+        font-size: 1.5vw; 
+    }
+
+    #owl-years .year p {
+        margin: 0;
+        text-align: center;
+        color: #ffffff;
+        font-size: 3.75vw;
+        font-family: BebasNeueProB;
+    }
+
+    .block {
+        margin: 6.25vw 0;
+    }
+
+    .block div {
+        line-height: 33.125vw;
+    }
+    
+    .block p {
+        font-size: 2.8vw;
+        font-family: BebasNeueProB;
+    }
+
+    .block img {
+        width: 33vw;
+        height: 33vw;
+    }
+
+    .caption {
+        margin: 6.25vw 0 2.5vw 0;
+        font-family: BebasNeueProB;
+        text-align: left;
+        font-size: 4.3vw;
+    }
+
+    .quote p {
+        font-size: 1.8vw;
+        width: 100%;
+    }
+
+    .quote .left {
+        text-align: left;
+        color: #b958e6;
+        font-size: 2.5vw;
+    }
+
+    .quote .right {
+        text-align: right;
+        color: #b958e6;
+        font-size: 2.5vw;
+    }
+
+    .quote p {
+        text-align: center;
+        font-size: 1.25vw;
+    }
+
+    #author {
+        text-align: right;
+        width: 100%;
+        font-size: 1.5vw;
+    }
+
+    .anthem_img {
+        height: 25.6vw;
+        width: auto;
+        margin-right: 2.5vw;    
+    }
+
+    .anthem_text {
+        line-height: 25.6vw;    
+    }
+
+    .psychologist_text, .psychologist_text a {
+        font-size: 1.25vw;
+        width: 40vw
+    }
+
+    .psychologist_img {
+        height: 25.6vw;
+        width: auto;
+        margin: auto 0;
+    }
+}
+
+@media screen and (max-width: 641px) {
+    .year {
+        width: 9.375vw;
+        height: 18.75vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 1.25vw;
+        margin-right: 3.125vw;
+    }
+
+    #owl-years p {
+        width: 43.75vw;
+        font-size: 1.5vw; 
+    }
+
+    #owl-years .year p {
+        margin: 0;
+        text-align: center;
+        color: #ffffff;
+        font-size: 3.75vw;
+        font-family: BebasNeueProB;
+    }
+
+    .block {
+        margin: 6.25vw 0;
+    }
+
+    .block div {
+        line-height: 33.125vw;
+    }
+    
+    .block p {
+        font-size: 2.8vw;
+        font-family: BebasNeueProB;
+    }
+
+    .block img {
+        width: 33vw;
+        height: 33vw;
+    }
+
+    .caption {
+        margin: 6.25vw 0 2.5vw 0;
+        font-family: BebasNeueProB;
+        text-align: left;
+        font-size: 4.3vw;
+    }
+
+    .quote p {
+        font-size: 1.8vw;
+        width: 100%;
+    }
+
+    .quote .left {
+        text-align: left;
+        color: #b958e6;
+        font-size: 2.5vw;
+    }
+
+    .quote .right {
+        text-align: right;
+        color: #b958e6;
+        font-size: 2.5vw;
+    }
+
+    .quote p {
+        text-align: center;
+        font-size: 1.25vw;
+    }
+
+    #author {
+        text-align: right;
+        width: 100%;
+        font-size: 1.5vw;
+    }
+
+    .anthem_img {
+        height: 25.6vw;
+        width: auto;
+        margin-right: 5vw;    
+    }
+
+    .anthem_text {
+        line-height: 25.6vw;    
+    }
+
+    .psychologist_text, .psychologist_text a {
+        font-size: 1.25vw;
+        width: 35vw
+    }
+
+    .psychologist_img {
+        height: 25.6vw;
+        width: auto;
+        margin: auto 0 auto 10vw;
+    }
+}

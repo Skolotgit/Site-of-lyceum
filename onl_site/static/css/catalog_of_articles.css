@@ -1,0 +1,73 @@
+.article {
+	margin: 1vw 1.5vw;
+}
+
+@media screen and (min-width: 1601px) {
+	.article {
+		margin: 16px 24px;
+	}
+
+	.preview {
+		background-position: center center;
+		background-size: cover;
+		width: 400px;
+		height: 240px;
+		border-radius: 16px;
+	}
+	
+	.article p {
+		font-size: 19.2px;
+	}
+}
+
+@media screen and (min-width: 641px) and (max-width: 1600px) {
+	.preview {
+		background-position: center center;
+		background-size: cover;
+		width: 25vw;
+		height: 15vw;
+		border-radius: 1vw;
+	}
+	
+	.article p {
+		font-size: 1.2vw;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.preview {
+		background-position: center center;
+		background-size: cover;
+		width: 35vw;
+		height: 21vw;
+		border-radius: 1vw;
+	}
+	
+	.article p {
+		font-size: 1.6vw;
+	}
+
+	.overlay_floor {
+		position: absolute;
+		z-index: 2;
+		width: 35vw;
+		height: 21vw;
+		border-radius: 1vw;
+		background-color: #8862eb;
+	}
+	
+	.overlay_floor p {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-right: -50%;
+		transform: translate(-50%, -50%);
+		color: #8862eb;
+		text-align: center;
+		vertical-align: middle;
+		background-color: #ffffff;
+		border-radius: 6.25vw;
+		padding: 1.25vw 3.75vw;
+		font-size: 1.9vw;
+	}
+}

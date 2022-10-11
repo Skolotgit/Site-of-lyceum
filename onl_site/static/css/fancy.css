@@ -1,0 +1,22 @@
+.fancybox__counter, .fancybox__caption {
+	text-decoration: none;
+	font-family: RobotoM;
+}
+
+.fancyimg {
+    background-position: center center;
+    background-size: cover;
+	margin: 0.6vw;
+    border-radius: 1vw;
+    width: 17.5vw;
+    height: 12vw;
+}
+
+@media screen and (min-width: 1601px) {
+    .fancyimg {
+        background-position: center center;
+        background-size: cover;
+        margin: 9.6px;
+        border-radius: 16px;
+    }    
+}

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+  <link rel="stylesheet" href="{% static 'css/catalog_of_articles.css' %}" type="text/css">
+{% endblock %}
+
+{% block content %}
+  <content>
+    <div class="col">
+      <div class="title_gr">
+        {% block title %}{% endblock %}
+      </div>
+    </div> 
+    <div class="special_col">
+      <div class="list_content">
+        {% block list %}{% endblock %} 
+      </div>
+      <div class="one_line_content">
+        {% for p in paginator.page_range %}
+          {% if page_obj.number == p %}
+            <a class="page_num page_num_selected">{{ p }}</a>
+          {% elif p >= page_obj.number|add:-2 and p <= page_obj.number|add:2 %}
+            <a href="?page={{ p }}" class="page_num">{{ p }}</a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+
+  </content> 
+{% endblock %}

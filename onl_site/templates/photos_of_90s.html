@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+  <link rel="stylesheet" href="{% static 'css/photos_of_90s.css' %}" type="text/css">
+{% endblock %}
+
+{% block content %}
+  <content>
+    <div class="col">
+      <div class="title_gr">
+        <h1 style="background-image: linear-gradient(135deg, #fa7df9,  #ff5353);">{{ title }}</h1>
+      </div>
+      <div class="list_content">
+        {% for i in images %}
+          <a data-fancybox="images" href="{{ i.img.url }}"><div class="fancyimg" style="background-image:url('{{ i.img.url }}')"></div></a>
+        {% endfor %} 
+      </div>
+    </div>  
+  </content>
+{% endblock %}

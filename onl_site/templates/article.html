@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+  <link rel="stylesheet" href="{% static 'css/article.css' %}" type="text/css">
+{% endblock %}
+
+{% block content %}
+  <content>
+    <div class="col">
+        <div id="title_article">{{ article.article_title }}</div>
+        <p class="pub_date">{{ article.pub_date|date:"j E Y" }}</p>
+        <a data-fancybox="images" href="{{ article.article_preview.url  }}"  data-caption=""><div class="cover_of_news" style="background-image:url('{{ article.article_preview.url }}')"></div></a>
+        <div class="text_of_article">{{ text }}</div>
+        <div class="list_content" style="justify-content: left">
+        {% for i in images %}
+          <a data-fancybox="images" href="{{ i.img.url }}" data-caption=""><div class="fancyimg art_photo" style="background-image:url('{{ i.img.url }}')"></div></a>    
+        {% endfor %}
+        {% for i in videos %}
+          <iframe class="video_yt" src="{{ i.yt_video_src }}" title="YouTube video player" width="600px" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+        {% endfor %}  
+      </div>  
+    </div>   
+  </content> 
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'catalog_of_articles.html' %}
+
+{% block title %}
+  <h1 style="background-image: linear-gradient(135deg, #f9db4f, #f2a559)">ФОТОГРАФІЇ<br>З ВАЖЛИВИХ ПОДІЙ</h1>
+{% endblock %}
+
+{% block list %}    
+  {% for i in page_obj %}
+    <a class="article" href="{% url 'old_article_page' i.id %}">
+      <div class="overlay_floor"><p>Детальніше</p></div>
+      <div style="background-image:url('{{ i.article_preview.url }}')" class="preview"></div>
+      <p>{{ i.article_title }}</p>
+      <p class="pub_date">{{ i.pub_date|date:"j E Y" }}</p>
+    </a>
+  {% endfor %}
+
+{% endblock %} 

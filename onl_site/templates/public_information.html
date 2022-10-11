@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+  <link rel="stylesheet" href="{% static 'css/public_information.css' %}" type="text/css">
+{% endblock %}
+
+{% block content %}
+  <content>
+    <div class="col">
+      <div class="title_gr">
+        <h1>ПУБЛІЧНА<br>ІНФОРМАЦІЯ</h1>
+      </div>
+      <p class="text_about_information">
+        <p class="text_in_mini_title">Загальні відомості про заклад</p>
+        <p>Обласний науковий ліцей в м. Рівне Рівненської обласної ради створений 1 вересня 1990 року для обдарованих дітей області на базі Рівненської загальноосвітньої школи-інтернату. Це загальноосвітній навчальний заклад інтернатного типу, що провадить освітню діяльність, спрямовану на залучення та підготовку учнівської молоді до наукової і науково-технічної діяльності з поглибленим вивченням предметів та забезпечує здобуття освіти понад державний мінімум, здійснює науково-практичну підготовку талановитої молоді, яка потребує соціальної допомоги.</p>
+        <ul>
+          <li><p>Адреса:<a href="https://goo.gl/maps/qLbHKZohNfx4A3AHA"> 33028 м. Рівне, вул. Котляревського, 1</a></p></li>
+          <li><p>Контактні телефони: <a href="tel:+380362635145">+380 36 263 5145,</a> <a href="tel:+380362635195">+380 36 263 5195</a></p></li> 
+          <li><p>Електронна пошта: <a href="mailto:licey@ua.fm">Licey@ua.fm</a></p></li> 
+          <li><p>Форма власності: <a href="https://ror.gov.ua/perelik-oblasnih-komunalnih-zakladiv-pidpriyemstv-ustanov">комунальний заклад Рівненської обласної ради</a></p></li>  
+          <li><p>Мова (мови) освітнього процесу: <a href="https://mova-ombudsman.gov.ua/informuvannya/derzhavna-mova-v-riznih-sferah/osvita-i-nauka">українська</a></p></li>
+        </ul>
+        {% for i in categories %}
+          <p class="text_about_information">
+            <p class="text_in_mini_title">{{ i.category_name }}</p>
+          </p>
+          <div class="list_content">
+          {% for j in documents %}
+            {% if j.category == i %}
+              <a class="document" href="{% url 'document_reader_page' j.id %}"><img src="{{ i.category_img.url }}" class="doc_logo"> <p class="text_about_document">{{ j.document_title }}</p></a>
+            {% endif %}
+          {% endfor %} 
+        </div>   
+      {% endfor %}
+    </div>
+  </content>
+{% endblock %}}  
